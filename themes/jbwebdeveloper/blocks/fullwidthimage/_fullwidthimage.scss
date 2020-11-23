@@ -1,0 +1,29 @@
+// main: ../../css/style.scss
+section.fullwidthimage{
+  // margin-top: 40px;
+  img{
+    width: 100%;
+    height: auto;
+    //min-width: 1400px;
+    &.frontImg{
+      width: 100%;
+      height: auto;
+      position: relative;
+      z-index: 2;
+    }
+    &.backImg{
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+    }
+    &.hidden{
+      visibility: hidden;
+      &.visible{
+        visibility: visible;
+      }
+    }
+  }
+}

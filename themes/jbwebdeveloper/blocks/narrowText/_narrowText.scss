@@ -1,0 +1,14 @@
+// main: ../../css/style.scss
+.narrowText{
+  margin: 0 auto;
+  max-width: 800px;
+  &.text-left{
+    text-align: left;
+  }
+  &.text-center{
+    text-align: center;
+  }
+  &.text-right{
+    text-align: right;
+  }
+}

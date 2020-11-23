@@ -1,0 +1,35 @@
+// main: ../css/style.scss
+
+.row{
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 20px;
+  // @media only screen and (max-width: $xlarge) {
+  //   width: calc(100% - 120px;);
+  //   // padding-left: 100px;
+  // }
+  &.expanded{
+    max-width: 100%;
+    padding: 0;
+  }
+  &.titlebar{
+    z-index: 1;
+    &+ .row{
+      margin-top: 0;
+    }
+  }
+}
+
+.flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  &.reverse{
+    flex-direction: row-reverse;
+  }
+  &.forward{
+    flex-direction: row;
+  }
+}

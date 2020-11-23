@@ -1,0 +1,24 @@
+/*
+ * Main column width
+ * This changes it from the default 580px to 1400px
+ */
+
+ .wp-block{
+   max-width: none;
+ }
+
+ .wp-block[data-align=wide] {
+   max-width: none;
+ }
+
+ .block-editor-block-list__layout .block-editor-block-list__block[data-align=wide]:before {
+   border-left-width: 1px;
+   border-right-width: 1px;
+ }
+
+@media (min-width: 600px){
+  .block-editor-block-list__layout .block-editor-block-list__block[data-align=wide] {
+    margin-left: -14px;
+    margin-right: -14px;
+  }
+}

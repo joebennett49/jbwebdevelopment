@@ -1,0 +1,115 @@
+// main: ../../css/style.scss
+
+.heading{
+  font-family: $mainFont;
+  height: 100%;
+  margin-top: 60px;
+  &.row{
+    // padding-top: 40px;
+    .content{
+      max-width: 400px;
+      .hidden{
+        visibility: hidden;
+      }
+      .hiddentxt{
+        width: 200px;
+      }
+      span {
+        border-right: .05em solid;
+        -webkit-animation: caret 1s steps(1) infinite;
+                animation: caret 1s steps(1) infinite;
+      }
+
+      @-webkit-keyframes caret {
+        50% {
+          border-color: transparent;
+        }
+      }
+
+      @keyframes caret {
+        50% {
+          border-color: transparent;
+        }
+      }
+    }
+    p{
+      font-size: 24px;
+      color: #fff;
+    }
+
+    .flex{
+      height: 100%;
+      // width: calc(100% - 200px);
+      // margin: 0 auto;
+      .flex-item{
+        &:first-of-type{
+          margin-bottom: 165px;
+          z-index: 2;
+        }
+        width: 50%;
+        .image{
+          position: relative;
+          overflow: visible;
+          img{
+            &.frontImg{
+              width: 700px;
+              height: auto;
+              position: relative;
+              z-index: 3;
+            }
+            &.backImg{
+              width: 700px;
+              height: auto;
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 2;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.square{
+    .row{
+      height: 600px;
+    }
+    .image{
+      &:after{
+        content: '';
+        background: $secondary-color;
+        width: 1400px;
+        border-radius: 150px;
+        height: 2000px;
+        position: absolute;
+        top: -300px;
+        left: 200px;
+        z-index: 1;
+        transform: rotate(-30deg);
+      }
+
+      // &:before{
+      //   content: '';
+      //   background: $secondary-color;
+      //   width: 1400px;
+      //   border-radius: 150px;
+      //   height: 1000px;
+      //   position: absolute;
+      //   top: -444px;
+      //   left: -116px;
+      //   z-index: -1;
+      //   transform: rotate(-9deg);
+      // }
+    }
+  }
+}
+
+
+//ONLY IN EDITOR
+.acf-block-preview{
+  .heading{
+    .flex{
+      overflow: visible;
+    }
+  }
+}
