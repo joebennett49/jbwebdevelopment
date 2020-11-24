@@ -5,7 +5,6 @@ $header = get_field('header');
 $header_color = get_field('header_color');
 $caption = get_field('caption');
 $link = get_field('link');
-$linkText = get_field('linktext');
 $image = get_field('image');
 $pseudo = get_field('shape');
 $size = 'full';
@@ -17,8 +16,11 @@ if( $pseudo ) {
   $shape = '';
 }
 
-if( $link ) {
-  $button = '<a class="bluebtn" href="'.$link.'">'.$linkText.'</a>';
+if( $link ){
+  $link_url = $link['url'];
+  $link_title = $link['title'];
+  $link_target = $link['target'] ? $link['target'] : '_self';
+  $button = '<a class="bluebtn" target="'.esc_attr($link_target).'" href="'.esc_url($link_url).'">'.esc_html($link_title).'</a>';
 }else{
   $button = '';
 }

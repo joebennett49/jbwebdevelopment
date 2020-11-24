@@ -174,9 +174,11 @@
         lastScrollTop = st;
     }
 
+
     //Footer CF7 textarea expansion
 
     if($('#autoExpand').length){
+      
       var textarea = document.getElementById("autoExpand");
       var limit = 200;
 
